@@ -802,6 +802,15 @@ type Domain struct {
 	State *DomainState `json:"state,omitempty"`
 }
 
+type DomainVerificationDnsRecord struct {
+	ID               *string `json:"id,omitempty"`
+	Label            *string `json:"label, omitempty"`
+	IsOptional       *bool   `json:"isOptional,omitempty"`
+	RecordType       *string `json:"recordType,omitempty"`
+	SupportedService *string `json:"supportedService,omitempty"`
+	Ttl              *int    `json:"ttl,omitempty"`
+}
+
 type DomainState struct {
 	LastActionDateTime *time.Time `json:"lastActionDateTime,omitempty"`
 	Operation          *string    `json:"operation,omitempty"`
